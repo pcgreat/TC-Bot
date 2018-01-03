@@ -6,7 +6,7 @@ Created on May 18, 2016
 
 import copy
 from collections import defaultdict
-from deep_dialog import dialog_config
+from src.deep_dialog import dialog_config
 
 class KBHelper:
     """ An assistant to fill in values for the agent (which knows about slots of values) """
@@ -32,7 +32,7 @@ class KBHelper:
         
         kb_results = self.available_results_from_kb(current_slots)
         if dialog_config.auto_suggest == 1:
-            print 'Number of movies in KB satisfying current constraints: ', len(kb_results)
+            print ('Number of movies in KB satisfying current constraints: ', len(kb_results))
 
         filled_in_slots = {}
         if 'taskcomplete' in inform_slots_to_be_filled.keys():

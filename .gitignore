@@ -1,1 +1,3 @@
 *.pyc
+.idea/
+src/deep_dialog/checkpoints/rl_agent

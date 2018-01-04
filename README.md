@@ -168,6 +168,24 @@ python run.py --agt 9 --usr 1 --max_turn 40
 	      --run_mode 3
 ```
 
+Test RL Agent with human:
+```sh
+python run.py --agt 9 --usr 0 --max_turn 40
+	      --movie_kb_path ./deep_dialog/data/movie_kb.1k.p
+	      --dqn_hidden_size 80
+	      --experience_replay_pool_size 1000
+	      --episodes 300 
+	      --simulation_epoch_size 100
+	      --write_model_dir ./deep_dialog/checkpoints/rl_agent/
+	      --slot_err_prob 0.00
+	      --intent_err_prob 0.00
+	      --batch_size 1
+	      --goal_file_path ./deep_dialog/data/user_goals_first_turn_template.part.movie.v1.p
+	      --trained_model_path ./deep_dialog/checkpoints/rl_agent/noe2e/agt_9_478_500_0.98000.p
+	      --run_mode 2
+	      --act_level 1
+```
+
 ## Evaluation
 To evaluate the performance of agents, three metrics are available: success rate, average reward, average turns. Here we show the learning curve with success rate.
 

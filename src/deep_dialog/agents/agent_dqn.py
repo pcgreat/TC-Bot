@@ -252,12 +252,12 @@ class AgentDQN(Agent):
     def load_experience_replay_from_file(self, path):
         """ Load the experience replay pool from a file"""
 
-        self.experience_replay_pool = pickle.load(open(path, 'rb'))
+        self.experience_replay_pool = pickle.load(open(path, 'rb'), encoding='latin1')
 
     def load_trained_DQN(self, path):
         """ Load the trained DQN from a file """
 
-        trained_file = pickle.load(open(path, 'rb'))
+        trained_file = pickle.load(open(path, 'rb'), encoding='latin1')
         model = trained_file['model']
 
         print("trained DQN Parameters:", json.dumps(trained_file['params'], indent=2))

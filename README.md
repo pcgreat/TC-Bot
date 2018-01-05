@@ -76,7 +76,8 @@ all the data is under this folder: ./src/deep_dialog/data
 
 ### Rule Agent
 ```sh
-python run.py --agt 5 --usr 1 --max_turn 40
+cd src/
+PYTHONPATH=../:. python3 run.py --agt 5 --usr 1 --max_turn 40
 	      --episodes 150
 	      --movie_kb_path ./deep_dialog/data/movie_kb.1k.p
 	      --goal_file_path ./deep_dialog/data/user_goals_first_turn_template.part.movie.v1.p
@@ -89,7 +90,8 @@ python run.py --agt 5 --usr 1 --max_turn 40
 ### Cmd Agent
 NL Input
 ```sh
-python run.py --agt 0 --usr 1 --max_turn 40
+cd src/
+PYTHONPATH=../:. python3 run.py --agt 0 --usr 1 --max_turn 40
 	      --episodes 150
 	      --movie_kb_path ./deep_dialog/data/movie_kb.1k.p
 	      --goal_file_path ./deep_dialog/data/user_goals_first_turn_template.part.movie.v1.p
@@ -102,7 +104,8 @@ python run.py --agt 0 --usr 1 --max_turn 40
 ```
 Dia_Act Input
 ```sh
-python run.py --agt 0 --usr 1 --max_turn 40
+cd src/
+PYTHONPATH=../:. python3 run.py --agt 0 --usr 1 --max_turn 40
 	      --episodes 150
 	      --movie_kb_path ./deep_dialog/data/movie_kb.1k.p 
 	      --goal_file_path ./deep_dialog/data/user_goals_first_turn_template.part.movie.v1.p
@@ -117,7 +120,8 @@ python run.py --agt 0 --usr 1 --max_turn 40
 ### End2End RL Agent
 Train End2End RL Agent without NLU and NLG (with simulated noise in NLU)
 ```sh
-python run.py --agt 9 --usr 1 --max_turn 40
+cd src/
+PYTHONPATH=../:. python3 run.py --agt 9 --usr 1 --max_turn 40
 	      --movie_kb_path ./deep_dialog/data/movie_kb.1k.p
 	      --dqn_hidden_size 80
 	      --experience_replay_pool_size 1000
@@ -135,7 +139,8 @@ python run.py --agt 9 --usr 1 --max_turn 40
 ```
 Train End2End RL Agent with NLU and NLG
 ```sh
-python run.py --agt 9 --usr 1 --max_turn 40
+cd src/
+PYTHONPATH=../:. python3 run.py --agt 9 --usr 1 --max_turn 40
 	      --movie_kb_path ./deep_dialog/data/movie_kb.1k.p
 	      --dqn_hidden_size 80
 	      --experience_replay_pool_size 1000
@@ -153,7 +158,8 @@ python run.py --agt 9 --usr 1 --max_turn 40
 ```
 Test RL Agent with N dialogues:
 ```sh
-python run.py --agt 9 --usr 1 --max_turn 40
+cd src/
+PYTHONPATH=../:. python3 run.py --agt 9 --usr 1 --max_turn 40
 	      --movie_kb_path ./deep_dialog/data/movie_kb.1k.p
 	      --dqn_hidden_size 80
 	      --experience_replay_pool_size 1000
@@ -170,7 +176,8 @@ python run.py --agt 9 --usr 1 --max_turn 40
 
 Test RL Agent with human:
 ```sh
-python run.py --agt 9 --usr 0 --max_turn 40
+cd src/
+PYTHONPATH=../:. python3 run.py --agt 9 --usr 0 --max_turn 40
 	      --movie_kb_path ./deep_dialog/data/movie_kb.1k.p
 	      --dqn_hidden_size 80
 	      --experience_replay_pool_size 1000

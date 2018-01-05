@@ -184,7 +184,7 @@ class nlg:
     def load_predefine_act_nl_pairs(self, path):
         """ Load some pre-defined Dia_Act&NL Pairs from file """
 
-        self.diaact_nl_pairs = json.load(open(path, 'rb'))
+        self.diaact_nl_pairs = json.load(open(path, 'r'))
 
         for key in self.diaact_nl_pairs['dia_acts'].keys():
             for ele in self.diaact_nl_pairs['dia_acts'][key]:
